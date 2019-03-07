@@ -17,8 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
 
 	<!--Load jquery.min.js file, which store in js folder.-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/testIQ.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/Menu.css">
+	<link rel="stylesheet" type="text/css" href="/webtestiq/css/testIQ.css">
+	<link rel="stylesheet" type="text/css" href="/webtestiq/css/Menu.css">
 	<<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -82,16 +82,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
         <div class="col-md-2">
             <div class="logo">
-                <img src="<?php echo base_url('HinhIQ/logo1.png'); ?>" />
+                <img src="/webtestiq/HinhIQ/logo1.png" />
             </div>
         </div>
         <div class="col-md-9" style="margin-left:19px">
-            <img class="header" src="<?php echo base_url('HinhIQ/IQvsEQ.png'); ?>" />
+            <img class="header" src="/webtestiq/HinhIQ/IQvsEQ.png" />
         </div>
     </div>
     <!-- Page Content -->
     <div class="container" style="padding-top:10px">
-        <div class="menu_an"><a onclick="hienmenu(1);"> <img src="<?php echo base_url('HinhIQ/icon_menu.png'); ?>" alt="icon menu" /></a></div>
+        <div class="menu_an"><a onclick="hienmenu(1);"> <img src="/webtestiq/HinhIQ/icon_menu.png" alt="icon menu" /></a></div>
         <div class="col-md-3" style="width:225px;">
             <div id="menu">
                 <ul style="list-style-type:none;">
