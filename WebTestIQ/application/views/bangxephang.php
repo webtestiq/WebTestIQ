@@ -56,6 +56,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <th>Nơi Ở:</th>
             <th>Sở Thích</th>
         </tr>
+      
+        <?php 
+        echo "<pre>";
+        print_r($data);
+        echo "</pre>";
+         }?>
     </table>
 </div>
         </div>
