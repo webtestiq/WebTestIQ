@@ -103,10 +103,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php
         include("menu.php");
     ?>
-        <div style="margin-left:5px">
-            <div class="col-md-9" style="border-top-style:double;
-    border-top-color:aquamarine;
-    border-top-width:5px; margin-left:-1px">
     <div class="col-md-9">
         <div id="time" style="display:none;">
             <p style="font-weight:bold; font-size:15px; text-align:center">
@@ -201,9 +197,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <p class="gtnd mag10">-&nbsp; Nguyên tắc: tiếp cận thế giới có kế hoạch, có tổ chức, có chuẩn bị, quyết định và đạt đến một kết quả rõ ràng.</p>
         <p class="gtnd mag10">-&nbsp; Linh hoạt: tiếp cận thế giới một cách tự nhiên, tìm phương pháp để thích nghi với hoàn cảnh, thích một kết quả bỏ ngỏ, chấp nhận các cơ hội mới, và chấp nhận thay đổi kế hoạch.</p>
         <p class="gtnd">Từ 4 tiêu chí trên, đưa ra 16 tính cách MBTI test khách nhau. Tên của từng nhóm đều có 4 chữ cái, đại diện cho 4 tiêu chuẩn để phân loại.</p>
-        <img src="<?php echo base_url('HinhIQ/LoaiTC.PNG'); ?>" alt="trắc nghiệm tính cách mbti" style="width:100%;max-width:800px;">
+        <img src="/webtestiq/HinhIQ/LoaiTC.PNG" alt="trắc nghiệm tính cách mbti" style="width:100%;max-width:800px;">
         <p>Mỗi yếu tố của 4 nhóm trên kết hợp với nhau tạo thành 16 nhóm tính cách MBTI:</p>
-        <img src="<?php echo base_url('HinhIQ/NhomTC.PNG'); ?>" style="width:100%;max-width:800px;" />
+        <img src="/webtestiq/HinhIQ/NhomTC.PNG" style="width:100%;max-width:800px;" />
         <div style="width:100%; text-align:center; margin: 20px 0 10px 0;">
             <!--Nút bấm bắt đầu làm bài có các Chức năng: ẩn div"thongtin", load khung bài test, load bài test 1, bắt đầu đếm thời gian làm-->
             <a class="bt_Test" id="bdtest" href="javascript:;" onclick="loadcauhoi(1, 'TC'); anthongtin(); lambaiTC(); CountDown();">Tôi Đã Sẵn Sàng</a>

@@ -164,19 +164,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php
         include("menu.php");
     ?>
-        <div style="margin-left:5px">
-            <div class="col-md-9" style="border-top-style:double;
-    border-top-color:aquamarine;
-    border-top-width:5px; margin-left:-1px">
     <div class="trangchu">
         <h2 style=" text-align:center">
             <b>
                 Bạn có tò mò về chỉ số <b>IQ</b> của mình không?
             </b>
         </h2>
-        <p style="text-align:center"> Hãy làm bài kiểm tra của chúng tôi để biết chỉ số <a href="/WebIQ/BaiTestIQ">IQ</a> của mình bạn nhé!!</p>
+        <p style="text-align:center"> Hãy làm bài kiểm tra của chúng tôi để biết chỉ số <a href="/WebIQ_Con/BaiTestIQ">IQ</a> của mình bạn nhé!!</p>
         <div style="width:100%; text-align:center; margin: 20px 0 10px 0;">
-            <a class="bt_Test" href="@Url.Action("BaiTestIQ","WebIQ")">Kiểm Tra Ngay Nào</a>
+            <a class="bt_Test" href="/webtestiq/index.php/WebIQ_Con/baitestiq">Kiểm Tra Ngay Nào</a>
         </div>
         <h4 style="margin-top:75px">
             <b>
@@ -184,7 +180,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </b>
         </h4>
         <p>
-            Người ta chia chỉ số <b><a href="/WebIQ/BaiTestIQ">IQ</a></b> gồm các nhóm sau:
+            Người ta chia chỉ số <b><a href="/WebIQ_Con/BaiTestIQ">IQ</a></b> gồm các nhóm sau:
         </p>
         <ul>
             <li>Chỉ số IQ dưới 85-Nhóm thấp(<b>16%</b>)</li>
@@ -195,13 +191,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </ul>
     </div>
     <div class="cangiua">
-        <img src=".//HinhIQ/bieudoIQ.png" />
+        <img src="/webtestiq/HinhIQ/bieudoIQ.png" />
     </div>
     <h4 style="text-align:center; margin-top:15px">
-        <b>Top 20 Bảng Xếp Hạng Chỉ Số <a href="/WebIQ/BaiTestIQ">IQ</a>Thế Giới</b>
+        <b>Top 20 Bảng Xếp Hạng Chỉ Số <a href="/WebIQ_Con/BaiTestIQ">IQ</a>Thế Giới</b>
     </h4>
     <div class="cangiua">
-        <img src=".//HinhIQ/bxhIQ.PNG" />
+        <img src="/webtestiq/HinhIQ/bxhIQ.PNG" />
     </div>
 </div>
         </div>

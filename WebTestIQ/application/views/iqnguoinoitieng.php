@@ -30,10 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php
         include("menu.php");
     ?>
-        <div style="margin-left:5px">
-            <div class="col-md-9" style="border-top-style:double;
-    border-top-color:aquamarine;
-    border-top-width:5px; margin-left:-1px" >
+    
     <div class="col-md-9" >
     <h2 style="color:blueviolet; text-align:center">IQ Của Nhóm Người Nổi Tiếng Thế Giới</h2>
     <div class="container">
