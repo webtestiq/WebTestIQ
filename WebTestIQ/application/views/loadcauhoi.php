@@ -18,51 +18,51 @@
     <?php foreach ($choi as $a) {?>
         <p style="font-size:18px;">
             <b>
-                Câu số <?php $a['Id'] ?>:
+                Câu số <?php echo $a['STT'] ?>:
             </b>
         </p>
 
         <div id="anwImg">
             <div class="baitest">
                 <div class="ques">
-                    <img src="~/Hinh_Cauhoi/$a['Cauhoi']" />
+                    <img src="/webtestiq/Hinh_Cauhoi/<?php echo $a['Noidung'] ?>" />
                 </div>
                 <div id="anw">
                     <div class="dapan">
-                        <img src="~/Hinh_Cauhoi/$a['DAn1']" onclick="luudapan(<?php $a['Id'] ?>em.Id+1,1,<?php $a['Id'] ?>)" />
+                        <img src="/webtestiq/Hinh_Cauhoi/<?php echo $a['DAn1']?>" onclick="luudapan(<?php $a['STT'] ?>em.Id+1,1,<?php $a['STT'] ?>)" />
                     </div>
                     <div class="dapan">
-                        <img src="~/Hinh_Cauhoi/$a['DAn2']" onclick="luudapan(<?php $a['Id'] ?>+1,2,<?php $a['Id'] ?>)" />
+                        <img src="/webtestiq/Hinh_Cauhoi/<?php echo $a['DAn2']?>" onclick="luudapan(<?php $a['STT'] ?>+1,2,<?php $a['STT'] ?>)" />
                     </div>
                     <div class="dapan">
-                        <img src="~/Hinh_Cauhoi/$a['DAn3']" onclick="luudapan(<?php $a['Id'] ?>+1,3,<?php $a['Id'] ?>)" />
+                        <img src="/webtestiq/Hinh_Cauhoi/<?php echo $a['DAn3']?>" onclick="luudapan(<?php $a['STT'] ?>+1,3,<?php $a['STT'] ?>)" />
                     </div>
                     <div class="dapan">
-                        <img src="~/Hinh_Cauhoi/$a['DAn4']" onclick="luudapan(<?php $a['Id'] ?>+1,4,<?php $a['Id'] ?>)" />
+                        <img src="/webtestiq/Hinh_Cauhoi/<?php echo $a['DAn4']?>" onclick="luudapan(<?php $a['STT'] ?>+1,4,<?php $a['STT'] ?>)" />
                     </div>
                     <div class="dapan">
-                        <img src="~/Hinh_Cauhoi/$a['DAn5']" onclick="luudapan(<?php $a['Id'] ?>+1,5,<?php $a['Id'] ?>)" />
+                        <img src="/webtestiq/Hinh_Cauhoi/<?php echo $a['DAn5']?>" onclick="luudapan(<?php $a['STT'] ?>+1,5,<?php $a['STT'] ?>)" />
                     </div>
                     <div class="dapan">
-                        <img src="~/Hinh_Cauhoi/$a['DAn6']" onclick="luudapan(<?php $a['Id'] ?>+1,6,<?php $a['Id'] ?>)" />
+                        <img src="/webtestiq/Hinh_Cauhoi/<?php echo $a['DAn6'] ?>" onclick="luudapan(<?php $a['STT'] ?>+1,6,<?php $a['STT'] ?>)" />
                     </div>
                 </div>
             </div>
         </div>
         <div id="anwRadio">
-            <p><?php $a['Cauhoi'] ?></p>
+            <p><?php $a['Noidung'] ?></p>
             <ul>
-                <li><input type="radio" name="DAn1" onclick="luudapanEQ(<?php $a['Id'] ?>+1,1,<?php $a['Id'] ?>)"><?php $a['DAn1'] ?><br /></li>
-                <li><input type="radio" name="DAn2" onclick="luudapanEQ(<?php $a['Id'] ?>+1,2,<?php $a['Id'] ?>)"><?php $a['DAn2'] ?><br /></li>
-                <li><input type="radio" name="DAn3" onclick="luudapanEQ(<?php $a['Id'] ?>+1,3,<?php $a['Id'] ?>)"><?php $a['DAn3'] ?><br /></li>
-                <li><input type="radio" name="DAn4" onclick="luudapanEQ(<?php $a['Id'] ?>+1,4,<?php $a['Id'] ?>)"><?php $a['DAn4'] ?><br /></li>
+                <li><input type="radio" name="DAn1" onclick="luudapanEQ(<?php $a['STT'] ?>+1,1,<?php $a['STT'] ?>)"><?php echo $a['DAn1'] ?><br /></li>
+                <li><input type="radio" name="DAn2" onclick="luudapanEQ(<?php $a['STT'] ?>+1,2,<?php $a['STT'] ?>)"><?php echo $a['DAn2'] ?><br /></li>
+                <li><input type="radio" name="DAn3" onclick="luudapanEQ(<?php $a['STT'] ?>+1,3,<?php $a['STT'] ?>)"><?php echo $a['DAn3'] ?><br /></li>
+                <li><input type="radio" name="DAn4" onclick="luudapanEQ(<?php $a['STT'] ?>+1,4,<?php $a['STT'] ?>)"><?php echo $a['DAn4'] ?><br /></li>
             </ul>
         </div>
         <div id="anwRadioTC">
-            <p><?php $a['Cauhoi'] ?></p>
+            <p><?php $a['Noidung'] ?></p>
             <ul>
-                <li><input type="radio" name="DAn1" onclick="luudapanTC(<?php $a['Id'] ?>+1,1,<?php $a['Id'] ?>)"><?php $a['DAn1'] ?><br /></li>
-                <li><input type="radio" name="DAn2" onclick="luudapanTC(<?php $a['Id'] ?>+1,2,<?php $a['Id'] ?>)"><?php $a['DAn2'] ?><br /></li>
+                <li><input type="radio" name="DAn1" onclick="luudapanTC(<?php $a['STT'] ?>+1,1,<?php $a['STT'] ?>)"><?php echo $a['DAn1'] ?><br /></li>
+                <li><input type="radio" name="DAn2" onclick="luudapanTC(<?php $a['STT'] ?>+1,2,<?php $a['STT'] ?>)"><?php echo $a['DAn2'] ?><br /></li>
             </ul>
         </div> 
     <?php }?>

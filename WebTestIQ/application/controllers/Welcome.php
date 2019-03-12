@@ -54,12 +54,6 @@ class Welcome extends CI_Controller {
 	}
 	public function bangxephang()
 	{
-		$query=$this->db->query("SELECT Diem, Hoten, Namsinh, Nghenghiep, Sothich FROM thanhtich a, users b WHERE a.IDUser = b.IDUser");
-        $data=$query->result_array();
-        log_message("" .$data);
-		$this->load->view('bangxephang',$data);
-		
-
+		$this->load->view('bangxephang');
 	}
-
 }

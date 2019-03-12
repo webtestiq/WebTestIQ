@@ -22,60 +22,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <!---------------------An thông tin để hiện câu hỏi-->
-    <script>
-        function anthongtin() {
-            document.getElementById("thongtin").style.display = 'none';
-        }
-    </script>
-    <!---------------------Hiện danh sách câu hỏi------------>
-    <script>
-    function loadlisttest(matest) {
-        $.ajax({
-            type: "get",
-            url: '@Url.Action("LoadListtest","WebIQ")',
-            data: { matest: matest },
-            success: function (a) {
-                $('#Listtest').html(a);
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                alert(errorThrown)
-            },
-        });
-    }
-    </script>
-    <!---------------------Load câu hỏi lên---------------->
-    <script>
-    function loadcauhoi(num,mtest) {
-        $.ajax({
-            type: "get",
-            url: "/webtestiq/index.php/WebIQ_Con/Loadcauhoi",
-            data: {
-                id: num,
-                matest: mtest,
-            },
-            success: function (a) {
-                $('#baitestiq').html(a);
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                alert(errorThrown)
-            },
-        });
-    }
-    </script>
-    <!---------------------Ẩn hiện menu------------------------>
-    <script>
-        function hienmenu() {
-            if (demm == null) {
-                document.getElementById("menu").style.display = 'block';
-                demm = "a";
-            }
-            else {
-                document.getElementById("menu").style.display = 'none';
-                demm = null;
-            }
-        }
-    </script>
+    <!---------------------File Script-->
+   <script type="text/javascript" src="/webtestiq/js/WebTestIQ.js"></script>
 </head>
 <body>
 
@@ -194,7 +142,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li style="color:blue;text-decoration:underline">Bạn nào có kết quả kiểm tra IQ>=130 sẽ được lưu vào bảng xếp hạng! Hiện ngay ở trang chủ</li>
             </ul>
             <div style="width:100%; text-align:center; margin: 20px 0 10px 0;">
-                <a class="bt_Test" id="bdtest" href="javascript:;" onclick="loadcauhoi(1, 'IQ'); anthongtin(); lambaiIQ();CountDown(); loadlisttest('IQ');">Tôi Đã Sẵn Sàng</a>
+                <a class="bt_Test" id="bdtest" href="javascript:;" onclick="loadcauhoi(1, 'IQ'); anthongtin();CountDown();lambaiIQ(); loadlisttest('IQ');">Tôi Đã Sẵn Sàng</a>
             </div>
         </div>
         </div>

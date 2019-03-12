@@ -53,14 +53,14 @@ class WebIQ_Con extends CI_Controller {
 		$this->load->view('iq');
 	}
 
-	public function Loadcauhoi($id, $matest)
+	public function loadcauhoi()
 	{
 		$this->load->model('baitest_model');
+		$id = $this ->input->post('id');
+		$matest = $this ->input->post('matest');
 
 		$choi['choi'] = $this->baitest_model->baitest($id, $matest);
-			
-        $this->load->view('baitestiq', $choi);
+        $this->load->view('loadcauhoi', $choi);
 	}
-
 }
 	
