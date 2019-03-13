@@ -26,8 +26,8 @@
     
     //-------------------Hiện danh sách câu hỏi------------>
     
-    function loadlisttest(matest) {
-        $("#Listtest").load("Listtest", {'matest': matest });
+    function loadlisttest(mtest) {
+        $("#numbertest").load("dsachcauhoi", { 'matest': mtest });
     }
     
     //-------------------Load câu hỏi lên---------------->

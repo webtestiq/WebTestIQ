@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     else {
                         kq[so] = da;
                         localStorage.setItem("kq", JSON.stringify(kq));
-                        window.location = "/WebIQ/Ketqua";
+                        window.location = "/webtestiq/index.php/WebIQ_Con/ketqua";
                     }
                 }
             }
@@ -111,7 +111,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </p>
             </div>
             <div id="baitestiq"></div>
-            <div id="Listtest"></div>
+            <div id="numbertest"></div>
         </div>
         <div id="thongtin" class="col-md-9">
             <p style="text-align:left;font-size:22px;">
