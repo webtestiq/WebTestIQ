@@ -22,118 +22,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <!---------------------An thông tin để hiện câu hỏi-->
-    <script>
-        function anthongtin() {
-            document.getElementById("thongtin").style.display = 'none';
-        }
-    </script>
-    <!---------------------Hiện danh sách câu hỏi------------>
-    <script>
-    function loadlisttest(matest) {
-        $.ajax({
-            type: "get",
-            url: '@Url.Action("LoadListtest","WebIQ")',
-            data: { matest: matest },
-            success: function (a) {
-                $('#Listtest').html(a);
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                alert(errorThrown)
-            },
-        });
-    }
-    </script>
-    <!---------------------Load câu hỏi lên---------------->
-    <script>
-    function loadcauhoi(num,mtest) {
-        $.ajax({
-            type: "get",
-            url: '@Url.Action("Loadcauhoi","WebIQ")',
-            data: {
-                id: num,
-                matest: mtest,
-            },
-            success: function (a) {
-                $('#baitestiq').html(a);
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                alert(errorThrown)
-            },
-        });
-    }
-    </script>
-    <!---------------------Ẩn hiện menu------------------------>
-    <script>
-        function hienmenu() {
-            if (demm == null) {
-                document.getElementById("menu").style.display = 'block';
-                demm = "a";
-            }
-            else {
-                document.getElementById("menu").style.display = 'none';
-                demm = null;
-            }
-        }
-    </script>
+    <!---------------------File Script-->
+   <script type="text/javascript" src="/webtestiq/js/WebTestIQ.js"></script>
 </head>
 <body>
-
 <div class="container">
-        <div class="col-md-2">
-            <div class="logo">
-                <img src="/webtestiq/HinhIQ/logo1.png" />
-            </div>
-        </div>
-        <div class="col-md-9" style="margin-left:19px">
-            <img class="header" src="/webtestiq/HinhIQ/IQvsEQ.png" />
-        </div>
-    </div>
-    <!-- Page Content -->
-    <div class="container" style="padding-top:10px">
-        <div class="menu_an"><a onclick="hienmenu(1);"> <img src="/webtestiq/HinhIQ/icon_menu.png" alt="icon menu" /></a></div>
-        <div class="col-md-3" style="width:225px;">
-            <div id="menu">
-                <ul style="list-style-type:none;">
-                    <li style="font-size:14px;">
-                        <a href="/webtestiq/"
-                           class="list-group-item"><span class="glyphicon glyphicon-home"></span>Trang Chủ</a>
-                    </li>
-                    <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/baitestiq"
-                           class="list-group-item"><span class="glyphicon glyphicon-star"></span>Test IQ</a>
-                    </li>
-                    <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/baitesteq"
-                           class="list-group-item"><span class="glyphicon glyphicon-heart"></span>Test EQ</a>
-                    </li>
-                    <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/tuyendung"
-                           class="list-group-item"><span class="glyphicon glyphicon-ok"></span>Test IQ Tuyển Dụng</a>
-                    </li>
-                    <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/tinhcach"
-                           class="list-group-item"><span class="glyphicon glyphicon-eye-open"></span>Test Tính Cách</a>
-                    </li>
-                    <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/iqnoitieng"
-                           class="list-group-item"><span class="glyphicon glyphicon-user"></span>IQ Các Thiên Tài</a>
-                    </li>
-                    <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/iq"
-                           class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span>IQ Là Gì?</a>
-                    </li>
-                    <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/bangxephang"
-                           class="list-group-item"><span class="glyphicon glyphicon-equalizer"></span>Bảng Xếp Hạng</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div style="margin-left:5px">
-            <div class="col-md-9" style="border-top-style:double;
-    border-top-color:aquamarine;
-    border-top-width:5px; margin-left:-1px">
+        <?php
+            include("menu.php");
+        ?>
+
         <!-----------------xoa loclStorage---------------------->
         <script>
             localStorage.clear();
@@ -172,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     else {
                         kq[so] = da;
                         localStorage.setItem("kq", JSON.stringify(kq));
-                        window.location = "/WebIQ/Ketqua";
+                        window.location = "/webtestiq/index.php/WebIQ_Con/ketqua";
                     }
                 }
             }
@@ -213,7 +110,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </p>
             </div>
             <div id="baitestiq"></div>
-            <div id="Listtest"></div>
+            <div id="numbertest"></div>
         </div>
         <div id="thongtin" class="col-md-9">
             <p style="text-align:left;font-size:22px;">
@@ -244,7 +141,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li style="color:blue;text-decoration:underline">Bạn nào có kết quả kiểm tra IQ>=130 sẽ được lưu vào bảng xếp hạng! Hiện ngay ở trang chủ</li>
             </ul>
             <div style="width:100%; text-align:center; margin: 20px 0 10px 0;">
-                <a class="bt_Test" id="bdtest" href="javascript:;" onclick="loadcauhoi(1, 'IQ'); anthongtin(); lambaiIQ();CountDown(); loadlisttest('IQ');">Tôi Đã Sẵn Sàng</a>
+                <a class="bt_Test" id="bdtest" href="javascript:;" onclick="loadcauhoi(1, 'IQ'); anthongtin();CountDown();lambaiIQ(); loadlisttest('IQ');">Tôi Đã Sẵn Sàng</a>
             </div>
         </div>
         </div>

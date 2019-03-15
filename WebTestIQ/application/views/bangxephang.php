@@ -43,25 +43,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php
         include("menu.php");
     ?>
-        <div style="margin-left:5px">
-            <div class="col-md-9" style="border-top-style:double;
-    border-top-color:aquamarine;
-    border-top-width:5px; margin-left:-1px">
     <h2 style="text-align:center">Bảng Xếp Hạng Chỉ Số IQ</h2>
     <table id="customers">
         <tr>
-            <th>Điểm</th>
-            <th>Họ Tên</th>
-            <th>Năm Sinh</th>
-            <th>Nơi Ở:</th>
-            <th>Sở Thích</th>
+            <th>Điểm: </th>
+            <th>Họ Tên: </th>
+            <th>Năm Sinh: </th>
+            <th>Nơi Ở: </th>
+            <th>Sở Thích: </th>
         </tr>
-      
-        <?php 
-        echo "<pre>";
-        print_r($data);
-        echo "</pre>";
-         }?>
+            <!--xuất đữ liệu -->  
+            <?php foreach ($bxh as $a) {?>
+                <tr>
+                    <td><?php echo $a['Diem'];?></td>
+                    <td><?php echo $a['Hoten'];?></td>
+                    <td><?php echo $a['Namsinh'];?></td>
+                    <td><?php echo $a['Nghenghiep'];?></td>
+                    <td><?php echo $a['Sothich'];?></td>
+                </tr>   
+            <?php }?>
     </table>
 </div>
         </div>
@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <hr>
     <!-- Footer -->
     <div class="container">
-        <footer style="float:left">
+        <footer style="float:left"> 
             <div class="row">
                 <div class="col-md-12">
                     <p>Copyright &copy; @DateTime.Now.Year; CPH_15DTH11_Hutech</p>

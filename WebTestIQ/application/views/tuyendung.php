@@ -43,10 +43,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php
         include("menu.php");
     ?>
-            <div style="margin-left:5px">
-                <div class="col-md-9" style="border-top-style:double;
-        border-top-color:aquamarine;
-        border-top-width:5px; margin-left:-1px">
         
 <script>
     function thongbao() {

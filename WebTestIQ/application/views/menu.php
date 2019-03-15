@@ -14,37 +14,41 @@
            <div id="menu">
                 <ul style="list-style-type:none;">
                     <li style="font-size:14px;">
-                        <a href="/webtestiq/"
+                        <a href="/webtestiq/index.php/WebIQ_Con/"
                            class="list-group-item"><span class="glyphicon glyphicon-home"></span>Trang Chủ</a>
                     </li>
                     <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/baitestiq"
+                        <a href="/webtestiq/index.php/WebIQ_Con/baitestiq"
                            class="list-group-item"><span class="glyphicon glyphicon-star"></span>Test IQ</a>
                     </li>
                     <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/baitesteq"
+                        <a href="/webtestiq/index.php/WebIQ_Con/baitesteq"
                            class="list-group-item"><span class="glyphicon glyphicon-heart"></span>Test EQ</a>
                     </li>
                     <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/tuyendung"
+                        <a href="/webtestiq/index.php/WebIQ_Con/tuyendung"
                            class="list-group-item"><span class="glyphicon glyphicon-ok"></span>Test IQ Tuyển Dụng</a>
                     </li>
                     <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/tinhcach"
+                        <a href="/webtestiq/index.php/WebIQ_Con/tinhcach"
                            class="list-group-item"><span class="glyphicon glyphicon-eye-open"></span>Test Tính Cách</a>
                     </li>
                     <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/iqnoitieng"
+                        <a href="/webtestiq/index.php/WebIQ_Con/iqnoitieng"
                            class="list-group-item"><span class="glyphicon glyphicon-user"></span>IQ Các Thiên Tài</a>
                     </li>
                     <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/iq"
+                        <a href="/webtestiq/index.php/WebIQ_Con/iq"
                            class="list-group-item"><span class="glyphicon glyphicon-question-sign"></span>IQ Là Gì?</a>
                     </li>
                     <li style="font-size:14px">
-                        <a href="/webtestiq/index.php/Welcome/bangxephang"
+                        <a href="/webtestiq/index.php/UserIQ130_Con/BxhIQ"
                            class="list-group-item"><span class="glyphicon glyphicon-equalizer"></span>Bảng Xếp Hạng</a>
                     </li>
                 </ul>
             </div>
         </div>
+        <div style="margin-left:5px">
+            <div class="col-md-9" style="border-top-style:double;
+    border-top-color:aquamarine;
+    border-top-width:5px; margin-left:-1px">
