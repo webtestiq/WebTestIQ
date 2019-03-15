@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
@@ -22,79 +22,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <!---------------------An thông tin để hiện câu hỏi-->
-    <script>
-        function anthongtin() {
-            document.getElementById("thongtin").style.display = 'none';
-        }
-    </script>
-    <!---------------------Hiện danh sách câu hỏi------------>
-    <script>
-    function loadlisttest(matest) {
-        $.ajax({
-            type: "get",
-            url: '@Url.Action("LoadListtest","WebIQ")',
-            data: { matest: matest },
-            success: function (a) {
-                $('#Listtest').html(a);
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                alert(errorThrown)
-            },
-        });
-    }
-    </script>
-    <!---------------------Load câu hỏi lên---------------->
-    <script>
-    function loadcauhoi(num,mtest) {
-        $.ajax({
-            type: "get",
-            url: '@Url.Action("Loadcauhoi","WebIQ")',
-            data: {
-                id: num,
-                matest: mtest,
-            },
-            success: function (a) {
-                $('#baitestiq').html(a);
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                alert(errorThrown)
-            },
-        });
-    }
-    </script>
-    <!---------------------Tính điểm Tích Cách sau khi làm bài test---------------->
-    <script>
-        var demm;
-        function soTC() {
-            var array = new Array(2, 1, 2, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2);
-            var Iq = 0;
-            var kqq = JSON.parse(localStorage.getItem("kq"));
-            var dem = 0;
-            var sc = array.length;
-            var i = 0;
-            for (i; i < sc; i++) {
-                if (array[i] == kqq[i]) {
-                    dem++;
-                }
-                Iq = parseInt((dem / 76) * 200);
-            }
-            localStorage.setItem("iq", JSON.stringify(Iq));
-        }
-    </script>
-    <!---------------------Ẩn hiện menu------------------------>
-    <script>
-        function hienmenu() {
-            if (demm == null) {
-                document.getElementById("menu").style.display = 'block';
-                demm = "a";
-            }
-            else {
-                document.getElementById("menu").style.display = 'none';
-                demm = null;
-            }
-        }
-    </script>
+    <!---------------------File Script-->
+    <script type="text/javascript" src="/webtestiq/js/WebTestIQ.js"></script>
 </head>
 <body>
 
@@ -110,7 +39,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </p>
         </div>
         <div id="baitestiq"></div>
+        <div id="numbertest"></div> 
     </div>
+
     <!-----------------xoa loclStorage---------------------->
     <script>
         localStorage.clear();
@@ -136,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             else {
                 kq[so] = da;
                 localStorage.setItem("kq", JSON.stringify(kq));
-                window.location = "/WebIQ/Ketqua";
+                window.location = "/webtestiq/index.php/WebIQ_Con/ketqua";
             }
         }
     </script>
@@ -163,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 if (min == 00 && sec == 00) {
                     clearInterval(count);
                     document.getElementById("demo").innerHTML = "Hết giờ !!";
-                    window.location = "/WebIQ/Ketqua";
+                    window.location = "/webtestiq/index.php/WebIQ_Con/ketqua";
                 }
             }, 1000);
         }
@@ -215,7 +146,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <footer style="float:left">
             <div class="row">
                 <div class="col-md-12">
-                    <p>Copyright &copy; @DateTime.Now.Year; CPH_15DTH11_Hutech</p>
+                    <p>Copyright &copy; @DateTime.Now.Year; _15DTH11_Hutech</p>
                 </div>
             </div>
         </footer>
