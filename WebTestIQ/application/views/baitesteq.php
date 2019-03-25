@@ -22,6 +22,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!---------------------File Script-->
+    <script type="text/javascript" src="/webtestiq/js/WebTestIQ.js"></script>
+
     <!---------------------Ẩn hiện menu------------------------>
     <script>
         function hienmenu() {
@@ -43,10 +46,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php
         include("menu.php");
     ?>
-        <div style="margin-left:5px">
-            <div class="col-md-9" style="border-top-style:double;
-    border-top-color:aquamarine;
-    border-top-width:5px; margin-left:-1px">
 
     <!-----------------xoa loclStorage---------------------->
     <script>
@@ -74,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             else {
                 kq[so] = da;
                 localStorage.setItem("kq", JSON.stringify(kq));
-                window.location = "/WebIQ/Ketqua";
+                window.location = "/webtestiq/index.php/WebIQ_Con/ketqua";
             }
         }
     </script>
@@ -101,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 if (min == 00 && sec == 00) {
                     clearInterval(count);
                     document.getElementById("demo").innerHTML = "Hết giờ cmmr !!";
-                    window.location = "/WebIQ/Ketqua";
+                    window.location = "/webtestiq/index.php/WebIQ_Con/ketqua";
                 }
             }, 1000);
         }
@@ -113,7 +112,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </p>
         </div>
         <div id="baitestiq"></div>
-        <div id="Listtest"></div>
+        <div id="numbertest"></div> 
     </div>
     <div id="thongtin" class="col-md-9">
         <div id="ndct">
@@ -154,7 +153,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <footer style="float:left">
             <div class="row">
                 <div class="col-md-12">
-                    <p>Copyright &copy; @DateTime.Now.Year; CPH_15DTH11_Hutech</p>
+                    <p>Copyright &copy; @DateTime.Now.Year; _15DTH11_Hutech</p>
                 </div>
             </div>
         </footer>
