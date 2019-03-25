@@ -26,7 +26,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
    <script type="text/javascript" src="/webtestiq/js/WebTestIQ.js"></script>
 </head>
 <body>
-
 <div class="container">
         <?php
             include("menu.php");

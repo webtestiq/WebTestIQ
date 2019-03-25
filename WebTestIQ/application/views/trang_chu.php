@@ -27,7 +27,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </head>
 <body>
-
+<?php session_start();//at the very top of the page
+            $_SESSION['authenticated']=false; ?>
 <div class="container">
         <!-- php menu -->
     <?php
