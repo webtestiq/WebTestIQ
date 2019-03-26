@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <footer style="float:left">
             <div class="row">
                 <div class="col-md-12">
-                    <p>Copyright &copy; @DateTime.Now.Year; CPH_15DTH11_Hutech</p>
+                    <p>Copyright &copy; _15DTH11_Hutech</p>
                 </div>
             </div>
         </footer>

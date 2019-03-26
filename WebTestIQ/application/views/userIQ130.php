@@ -31,7 +31,7 @@
         include("menu.php");
     ?>
         <div class="userIQ130">
-            <form action="/webtestiq/index.php/UserIQ130_Con/UserIQ130_post" method="post" enctype="multipart/form-data" onsubmit="return confirm('Do you really want to submit the form?');">
+            <form action="/webtestiq/index.php/UserIQ130_Con/UserIQ130_post" method="post" enctype="multipart/form-data" onsubmit="return confirm('Xác nhận thông tin !');">
             
                 <label for="fname">Họ và Tên</label>
                 <input type="text" id="hoten" name="hoten" placeholder="Họ và Tên..">
@@ -66,7 +66,7 @@
         <footer style="float:left">
             <div class="row">
                 <div class="col-md-12">
-                    <p>Copyright &copy; @DateTime.Now.Year; CPH_15DTH11_Hutech</p>
+                    <p>Copyright &copy; _15DTH11_Hutech</p>
                 </div>
             </div>
         </footer>

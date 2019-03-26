@@ -49,19 +49,19 @@
             </div>
         </div>
         <div id="anwRadio">
-            <p><?php $a['Noidung'] ?></p>
+            <p><?php echo $a['Noidung'] ?></p>
             <ul>
-                <li><input type="radio" name="DAn1" onclick="luudapanEQ(<?php echo $a['STT'] ?>,1,<?php echo $a['STT'] ?>)"><?php echo $a['DAn1'] ?><br /></li>
-                <li><input type="radio" name="DAn2" onclick="luudapanEQ(<?php echo $a['STT'] ?>,2,<?php echo $a['STT'] ?>)"><?php echo $a['DAn2'] ?><br /></li>
-                <li><input type="radio" name="DAn3" onclick="luudapanEQ(<?php echo $a['STT'] ?>,3,<?php echo $a['STT'] ?>)"><?php echo $a['DAn3'] ?><br /></li>
-                <li><input type="radio" name="DAn4" onclick="luudapanEQ(<?php echo $a['STT'] ?>,4,<?php echo $a['STT'] ?>)"><?php echo $a['DAn4'] ?><br /></li>
+                <li><input type="radio" name="DAn1" onclick="luudapanEQ(<?php echo $a['STT'] ?> +1,1,<?php echo $a['STT'] ?>)"><?php echo $a['DAn1'] ?><br /></li>
+                <li><input type="radio" name="DAn2" onclick="luudapanEQ(<?php echo $a['STT'] ?> +1,2,<?php echo $a['STT'] ?>)"><?php echo $a['DAn2'] ?><br /></li>
+                <li><input type="radio" name="DAn3" onclick="luudapanEQ(<?php echo $a['STT'] ?> +1,3,<?php echo $a['STT'] ?>)"><?php echo $a['DAn3'] ?><br /></li>
+                <li><input type="radio" name="DAn4" onclick="luudapanEQ(<?php echo $a['STT'] ?> +1,4,<?php echo $a['STT'] ?>)"><?php echo $a['DAn4'] ?><br /></li>
             </ul>
         </div>
         <div id="anwRadioTC">
-            <p><?php $a['Noidung'] ?></p>
+            <p><?php echo $a['Noidung'] ?></p>
             <ul>
-                <li><input type="radio" name="DAn1" onclick="luudapanTC(<?php echo $a['STT'] ?>,1,<?php echo $a['STT'] ?>)"><?php echo $a['DAn1'] ?><br /></li>
-                <li><input type="radio" name="DAn2" onclick="luudapanTC(<?php echo $a['STT'] ?>,2,<?php echo $a['STT'] ?>)"><?php echo $a['DAn2'] ?><br /></li>
+                <li><input type="radio" name="DAn1" onclick="luudapanTC(<?php echo $a['STT'] ?> +1,1,<?php echo $a['STT'] ?>)"><?php echo $a['DAn1'] ?><br /></li>
+                <li><input type="radio" name="DAn2" onclick="luudapanTC(<?php echo $a['STT'] ?> +1,2,<?php echo $a['STT'] ?>)"><?php echo $a['DAn2'] ?><br /></li>
             </ul>
         </div> 
     <?php }?>

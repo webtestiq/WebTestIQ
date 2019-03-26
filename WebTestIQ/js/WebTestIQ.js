@@ -105,29 +105,3 @@
                 demm = null;
             }
         }
-    //------------- Dem Nguoc thoi gian-------------->
-            function CountDown() {
-            var sec = 00;
-            var min = 20;
-            document.getElementById("time").style.display = 'block';
-            var count = setInterval(function () {
-                sec--;
-            if (sec == -01) {
-                sec = 59;
-            min = min - 1;
-        }
-                else {
-                min = min;
-            }
-                if (sec <= 9) {
-                sec = "0" + sec;
-            }
-            document.getElementById("demo").innerHTML = min + "phút" + sec + "giây";
-
-                if (min == 00 && sec == 00) {
-                clearInterval(count);
-            document.getElementById("demo").innerHTML = "Hết giờ cmmr !!";
-            window.location = "/WebIQ/Ketqua";
-        }
-    }, 1000);
-}

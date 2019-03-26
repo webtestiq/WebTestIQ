@@ -9,7 +9,7 @@ class baitest_model extends CI_Model
         return $data;
     }
     public function loadlisttest($matest){
-        $query=$this->db->query("SELECT STT,MaTests FROM `questions` WHERE `MaTests` LIKE 'IQ' ORDER BY `STT` ASC");
+        $query=$this->db->query("SELECT STT,MaTests FROM `questions` WHERE `MaTests` LIKE '$matest' ORDER BY `STT` ASC");
         $data=$query->result_array();
         return $data;
     }
